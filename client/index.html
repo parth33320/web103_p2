@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Tech Innovations | CodePath WEB103 Listicle</title>
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-brand">
+        <span class="logo-icon">⚡</span>
+        <h1>Top 10 Tech Innovations</h1>
+      </div>
+      <p class="header-subtitle">Exploring groundbreaking technologies shaping humanity's future</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search innovations by keyword, category, or description..."
+          aria-label="Search innovations"
+        />
+        <button id="clear-search-btn" class="clear-btn" aria-label="Clear search">&times;</button>
+      </div>
+
+      <div class="filter-group">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="ALL">All Categories</option>
+          <option value="AI & Software">AI & Software</option>
+          <option value="Hardware & Physics">Hardware & Physics</option>
+          <option value="Energy & Sustainability">Energy & Sustainability</option>
+          <option value="Biotechnology">Biotechnology</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Aerospace & Exploration">Aerospace & Exploration</option>
+          <option value="Telecommunications">Telecommunications</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="results-header">
+      <h2 id="results-count">Showing 10 Innovations</h2>
+      <span class="db-status-badge">🟢 Connected to PostgreSQL</span>
+    </section>
+
+    <section id="items-container" class="items-grid">
+      <!-- Dynamic list cards loaded from PostgreSQL database -->
+      <div class="loading-spinner">Loading innovations from database...</div>
+    </section>
+
+    <!-- Modal for Item Details -->
+    <div id="detail-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <button id="close-modal-btn" class="close-modal">&times;</button>
+        <div id="modal-body">
+          <!-- Dynamic detail content -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 CodePath WEB103 Unit 2 Project 2 Listicle. Powered by Node.js, Express, and PostgreSQL.</p>
+    </div>
+  </footer>
+
+  <script src="/src/js/app.js" type="module"></script>
+</body>
+</html>
