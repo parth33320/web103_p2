@@ -1,0 +1,21 @@
+{
+  "name": "web103-unit2-listicle",
+  "version": "1.0.0",
+  "description": "CodePath WEB103 Unit 2 Project 2 Listicle Part 2",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "reset": "node server/config/reset.js",
+    "test": "NODE_ENV=test node --test server/tests/*.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
